@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="6;url=signUp.html"
+    <title>Codeflash - Samples</title> <!-- Sets the title of the webpage displayed in the browser tab -->
+<style>
+
+ /* Reset margin and padding for all elements */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ /* Set the body to fill the entire viewport height */
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+ /* Background image styling */
+.bgimage {
+  background-image: linear-gradient(to right, #ff7e5f, #feb47b); /* Background gradient color */
+  background-size: cover; /* Cover the entire area */
+}
+
+ /* Main page container */
+.page {
+  background-size: cover;
+  height: 100vh; /* Full viewport height */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  color: #F1F1F1; /* Light text color */
+  background-color: rgba(0,0,0, 0.3); /* Semi-transparent black overlay */
+}
+
+ /* Spacing for heading and paragraph */
+.page h1, p {
+  padding: 10px 20px;
+}
+
+ /* Text animation effect */
+.pagetextanimation {
+  position: relative;
+  letter-spacing: 4px; /* Adds space between letters */
+  overflow: hidden; /* Hides overflowing content */
+  background: linear-gradient(30deg, #ff1, #f1f1f1, #7f1); /* Gradient for animation */
+  background-repeat: no-repeat;
+  background-size: 80%; /* Size of the animated background */
+  animation: animate 6s linear infinite; /* Continuous animation */
+  -webkit-background-clip: text; /* Clips the background to the text */
+  -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Makes text transparent */
+}
+
+ /* Keyframes for the text animation */
+@keyframes animate {
+  0% {
+    background-position: -500%; /* Start position */
+  }
+  100% {
+    background-position: 500%; /* End position */
+  }
+}
+
+ /* Styling for the animated arrow */
+.arrow {
+  margin: 0 auto; /* Centers the arrow horizontally */
+  text-align: center;
+}
+
+ /* Arrow shape using pseudo-element */
+.arrow::after {
+  content: ""; /* Creates the arrow shape */
+  width: 20px;
+  height: 20px;
+  margin: 70vh auto; /* Positions the arrow at the bottom */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-right: 4px solid #f1f1f1; /* Right line of the arrow */
+  border-bottom: 4px solid #f1f1f1; /* Bottom line of the arrow */
+  transform: rotate(45deg); /* Rotates to form an arrow */
+  animation: 1.5s arrow infinite ease; /* Animation for the arrow */
+}
+
+ /* Keyframes for the arrow animation */
+@keyframes arrow {
+  0%, /* Initial position */
+  100% {
+    top: 50px; /* Arrow at the top position */
+  }
+
+  50% {
+    top: 80px; /* Arrow at the bottom position */
+  }
+}
+
+</style>
+</head>
+<body>
+
+ <!-- Background image container -->
+<div class="bgimage">
+  <!-- Main page content -->
+  <div class="page" id="pageid" align="center">
+    <!-- Welcome heading -->
+    <h1>
+      <font color="#FF9800">&lt;</font>Welcome<br>to<br>myWeb<font color="#FF9800">/&gt;</font>
+    </h1>
+    <!-- Sliding text animation -->
+    <p>
+      <span class="pagetextanimation">
+        The best website for free document downloading ever seen !!!
+      </span>
+    </p>
+    <!-- Downward arrow for interaction -->
+    <div class="arrow" onclick="test()"></div>
+  </div>
+</div>
+<script>
+  function test(){
+    HTMLDocument.prototype.open("index.html","index","",true)
+  }
+</script>
+</body>
+</html>

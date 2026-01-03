@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> <!-- Sets the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <title>Codeflash - Samples</title> <!-- Sets the title of the webpage displayed in the browser tab -->
+    <style>
+        /* Resetting default browser styles and setting common properties */
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none; /* Removes bullet points from lists */
+            text-decoration: none; /* Removes underlines from links */
+            transition: 0.3s; /* Adds a transition effect to all properties */
+            -webkit-touch-callout: none; /* Disables callout, tooltip appearing when touching and holding a touch target */
+            -webkit-user-select: none; /* Disables text selection on Safari */
+            user-select: none; /* Disables text selection */
+            outline: none; /* Removes outline from elements */
+        }
+
+        /* Sets the background color of the body */
+        body {
+            background-color: #fff; /* Dark gray background */
+        }
+
+        /* Styles for the hamburger menu container */
+        .ham {
+            width: 45px;
+            height: 45px;
+            background: black;
+            border-radius: 7px; /* Rounds the corners */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 99; /* Ensures the menu is on top */
+            position: fixed;
+            top: 15px;
+            left: 20px;
+            align:left;
+        }
+
+        /* Styles for the lines inside the hamburger menu */
+        .line1, .line2, .line3 {
+            background: white;
+            border-radius: 3px;
+            width: 25px;
+            height: 3px;
+            margin: 2px;
+        }
+
+        /* Transformations applied when the menu is active (opened) */
+        .active .line1 {
+            transform: rotate(-45deg) translate(-5px, 5px);
+        }
+        .active .line2 {
+            opacity: 0; /* Hides the middle line */
+        }
+        .active .line3 {
+            transform: rotate(45deg) translate(-5px, -5px);
+        }
+
+        /* Styles for the header section */
+        header {
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Class to slide the menu into view */
+        .link {
+            left: 0%;
+        }
+
+        /* Styles for the navigation menu */
+        nav ul {
+            left: -50%; /* Positions the menu off-screen to the left */
+            position: fixed;
+            height: 100vh;
+            width: 50%;
+            background: #111; /* Dark background for the menu */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Styles for the menu heading */
+        ul h1 {
+            color: #fff; /* White text color */
+        }
+
+        /* Styles for each menu item */
+        ul li {
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+            border: 2px goldenrod;
+        }
+
+        /* Hover effect for menu items */
+        ul li:active {
+            background: #26A69A; /* Changes background on hover */
+            padding-left: 7%; /* Indents text on hover */
+            width: 93%;
+        }
+
+        /* Styles for the menu links */
+        li a {
+            color: #fff; /* White text color */
+        }
+        .profile {
+          border-radius:20pt 20pt 20pt 0;
+          color: orangered;
+          background-color:#fff;
+          align:right;
+          width:60px;
+          align-content: center;
+          text-align: center;
+          padding: 20px;
+          margin-bottom:200px ;
+          font-size: 24pt;
+          font-weight: bolder;
+        }
+        
+      .profile:active{
+        background: lightskyblue;
+        transform: translate(20%,0) rotate(-25deg);
+        
+      }
+        /* Styles for text content */
+        .text {
+            padding: 1px 10px;
+            color: #fff; /* White text color */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- Navigation menu -->
+    <nav>
+     
+        
+      
+        <ul id="ul">
+          <div class="profile mdl-button mdl-js-button mdl-button--fab">H</div>
+            <h1>MENU</h1><br>
+            <li><a href="signUp.html">INSCRIPTION</a></li>
+            <li><a href="#">TÉLÉCHARGER</a></li>
+            <li><a href="apropos.html">À PROPOS DE NOUS</a></li>
+        </ul>
+    </nav>
+  
+    <!-- Hamburger menu icon -->
+    <div id="hamMenu" class="ham" onclick="hamMenuClick()">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    
+
+</header>
+<footer>
+   <!-- Footer text -->
+    <p align="center"><font color="#A7A8AA">2026 © H3bDocs</font></p>
+</footer>
+<script>  
+    // Function to handle hamburger menu click
+    function hamMenuClick() {
+        // Toggles the 'active' class on the hamburger menu to animate the lines
+        ham=document.getElementById("hamMenu")
+        ham.classList.toggle("active");
+        // Toggles the 'link' class on the navigation menu to slide it into view
+        hue=Math.round(Math.random()*256)
+        ham.style.background=`rgba(${hue},${hue/100},140,0.7)`;
+        document.getElementById("ul").classList.toggle("link");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>myWeb - Inscription</title> <!-- Sets the title of the webpage displayed in the browser tab -->
+  <link rel="stylesheet" href="/res/material.cyan-light_blue.min.css">
+<style>
+/* Body styling */
+body {
+  background-color: #F6F6F6; /* Light gray background */
+  display: flex;
+  align-content: center;
+  
+   /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  margin: 0; /* Remove default margin */
+  min-height: 100vh; /* Set minimum height to viewport height */
+}
+#footer_div{
+  text-align: right;
+  align-self: right;
+  align-content: right;
+  box-align: right;
+  justify-self: left;
+  
+}
+
+/* Heading (Sign Up) styling */
+h1 {
+  color: #CD5D5D; /* Light red color */
+  text-shadow: 3px 4px 1px #CECECE; /* Text shadow effect */
+  background-clip: text;
+  animation: animate 3s linear infinite;
+  font-size: 24pt;
+  font-weight: bolder;
+  transition: all ease 1s;
+}
+@keyframes animate {
+  0% {
+    color: deeppink;
+    background-position: -50%; /* Start position */
+  }
+  30%{
+    color: #fe9994;
+  }
+  100% {
+    color :#923dfd;
+    background-position: 50%; /* End position */
+  }
+}
+/* Login form container styling */
+.logindiv{
+  height:80% ;
+  width: 86%; /* Responsive width */
+  background-color: #FFFFFF; /* White background */
+  border-radius: 6px; /* Rounded corners */
+  padding-top: 10px; /* Top padding */
+  padding-bottom: 20px; /* Bottom padding */
+  box-shadow: 5px 5px 10px #808080; /* Light gray shadow */
+  align-content: center;
+}
+
+/* Input field styling */
+input {
+  width: 70%; /* Input width */
+  border: 1px solid #CECECE; /* Light gray border */
+  border-radius: 6px; /* Rounded corners */
+  padding: 12px 6px; /* Inner padding */
+  margin-bottom: 5px; /* Spacing between inputs */
+  outline: none; /* Remove outline on focus */
+  background-color: #F6F6F6; /* Light gray background */
+}
+
+/* Submit button styling */
+.submit {
+  width: 50%; /* Button width */
+  background-color: #CD5D5D; /* Light red background */
+  outline: none; /* Remove focus outline */
+  color: #F6F6F6; /* Light gray text color */
+  border: none; /* Remove border */
+  font-weight: bold; /* Bold text */
+  animation: animate 1.5s ease-in-out infinite;
+}
+
+/* Privacy policy text styling */
+.privacy {
+  width: 70%; /* Width of the text block */
+  margin: 5px 0px 10px 0px; /* Spacing around the text */
+}
+</style>
+</head>
+<body>
+
+<!-- Sign-up form container -->
+<div class="logindiv mdl-layout__header.is-compact pulse" align="center">
+  <form>
+    <!-- Sign-up title -->
+    <h1>INSCRIPTION</h1>
+    
+    <!-- Username input field -->
+    <input type="text" placeholder="Nom et Prénom" required>
+    
+    <!-- Email input field -->
+    <input type="email" placeholder="Adresse mail" required>
+    
+    <!-- Password input field -->
+    <input type="password" class="mdl-textfield__input.is-invalid" placeholder="mot de passe" required id="id_password">
+    
+    <!-- Privacy policy link -->
+    <p class="privacy" align="left">
+      By creating an account you agree to our 
+      <a href="#" style="color:#CD5D5D">Terms & Privacy</a>.
+    </p>
+    
+    <!-- Submit button -->
+    <input class="submit mdl-button mdl-js-button mdl-button--fab" type="submit">
+  </form>
+    <marquee behavior="" direction=""align="bottom">myWeb made with L❤️VE by RIH</marquee>
+
+</div>
+
+
+</body>
+
+
+</html>
